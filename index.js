@@ -2,11 +2,11 @@ const path = require('path');
 
 const express = require('express');
 
+require('dotenv').config()
+
 const socket = require('./socket/socket')
 
 const app = express();
-
-require('dotenv').config()
 
 app.use('/static', express.static(path.join(__dirname, 'static')));
 app.get("/", (req, res, next) =>{
