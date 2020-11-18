@@ -17,7 +17,7 @@ This repo has some basic setup, to test your socketio loadbalance solution.
 - Rename .env.save to .env
 - Define a server name on .env SERVER options, this will be displayed, when(which server) your are connected and where(which server) the message is came from.
 
-## Solution 1
+## Solution 1 [&#128279](/Solution_1)
 We are using Redis and socket.io-redis adapter to loadbalance, which works perfectly when used with sticky session / ip_hash Load balance with Nginx.
 
 Works With
@@ -26,6 +26,15 @@ Works With
 - ip_hash load balance with Nginx.
 
 I have discussed about the solution here, [Load Balancing Node.js Application #Socket.io](https://www.bloggernepal.com/2020/05/load-balancing-nodejs-application.html)
+
+## Solution 2 [&#128279](/Solution_2)
+There are multiple reasons we should not use sticky session. So here is solution, but we will miss what socketio offers.
+
+Works With
+
+- Devices supporting websocket.
+
+I have discussed about the solution as well [Load Balancing Node.js Application #Socket.io](https://www.bloggernepal.com/2020/05/load-balancing-nodejs-application.html)
 
 ### Links
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io Loadbalance to Multiple Servers</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div id="join">
+        <input type="text" id="name">
+        <button type="button" onclick="join()" >Join</button>
+    </div>
+    <div id="chat">
+        <h2>Me: <span id="me"></span></h2>
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+              <span id="gena"></span>
+              <div id="left">
+        
+              </div>
+              
+            </div>
+            <div>
+              <span id="genb"></span>
+              <div id="right"></div>
+            </div>
+          </div>
+        <input type="text" id="message">
+        <select name="to" id="to">
+            <option value="ram">Ram</option>
+            <option value="sita">Sita</option>
+        </select>
+        <button type="button" onclick="send()" >Send</button>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        if(isJoined){
+            document.getElementById("join").style.display = "none";
+        } else {
+            document.getElementById("chat").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
